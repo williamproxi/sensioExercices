@@ -11,6 +11,8 @@ class Member{
         if ($login == $this->login && $password == $this->password){
             return true;
         }
-        return false;
+        else{
+            throw new Exception("Authentification failed !");   
+        }
     }
 }
