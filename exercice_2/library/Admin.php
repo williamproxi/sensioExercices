@@ -6,7 +6,8 @@ class Admin extends Member{
     
     protected static int $cpt = 0;
     // enum level{ case ADMIN, case SUPERADMIN}
-    public function __construct(protected string $login, 
+    public function __construct(string $nom,
+                                protected string $login, 
                                 protected string $password, 
                                 public ?int $age = null,
                                 private Level $level = Level::ADMIN)

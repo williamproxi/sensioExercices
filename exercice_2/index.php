@@ -1,6 +1,7 @@
 <?php
-require __DIR__ . '/library/Member.php';
-require __DIR__ . '/library/Admin.php';
+require_once __DIR__ . '/library/Member.php';
+require_once __DIR__ . '/library/Admin.php';
+
 $m = new Member('william','will','pas',10);
 $n = new Member('deo','will','pas',10);
 $admin = new Admin('alo','will','pas',10,Level::SUPERADMIN);
