@@ -30,4 +30,9 @@ class Member extends User implements AuthInterface{
     {
         return static::$cpt;
     }
+
+    public function __toString()
+    {
+        return sprintf("nom : %s, age : %d",$this->name, $this->age);
+    }
 }

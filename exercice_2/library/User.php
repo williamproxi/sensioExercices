@@ -1,6 +1,6 @@
 <?php
 
-class User {
+abstract class User {
     public function __construct(protected string $name){
 
     }
@@ -11,4 +11,6 @@ class User {
     public function setName($name){
         $this->name = $name;
     }
+
+    abstract public function __toString();
 }
