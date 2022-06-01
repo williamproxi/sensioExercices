@@ -16,13 +16,10 @@ class Admin extends Member{
     }
     public function auth(string $login, string $password): bool{
 
-        if ( parent::auth($login,$password)
-        || Level::SUPERADMIN == $this->level){
-            return true;
-        }
-        return false;
+      
+        return Level::SUPERADMIN == $this->level || parent::auth($login,$password);
+        
     }
-
     public function __toString()
     {
         $parent = parent::__toString();

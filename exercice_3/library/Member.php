@@ -16,10 +16,13 @@ class Member extends User implements AuthInterface{
     }
 
     public function auth(string $login, string $password): bool{
-        if ($login == $this->login && $password == $this->password){
-            return true;
+        $return = $login == $this->login && $password == $this->password;
+
+        if (!$return){
+            require_once __DIR__ . "/AuthFailException.php";
+            throw new AuthFailException("Authentification failed !");
         }
-        return false;
+        return true;
     }
 
     function __destruct()
