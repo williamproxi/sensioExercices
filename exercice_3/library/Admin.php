@@ -1,6 +1,7 @@
 <?php
-
-require_once "Level.php";
+namespace Exercices;
+require_once __DIR__."/Level.php";
+require_once __DIR__."/Member.php";
 
 class Admin extends Member{
     

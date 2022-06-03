@@ -1,5 +1,5 @@
 <?php
-
-class AuthFailException extends Exception{
+namespace Exercices;
+class AuthFailException extends  \Exception{
     
 }

@@ -1,7 +1,9 @@
 <?php
-require_once 'AuthInterface.php';
-require_once 'User.php';
+namespace Exercices;
 
+require_once __DIR__.'/AuthInterface.php';
+require_once __DIR__.'/User.php';
+ 
 class Member extends User implements AuthInterface{
 
     protected static int $cpt = 0;

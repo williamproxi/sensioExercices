@@ -1,6 +1,8 @@
 <?php
-require_once __DIR__ . '/library/Member.php';
+
+require_once __DIR__. '/library/AuthFailException.php';
 require_once __DIR__ . '/library/Admin.php';
+
 
 $m = new Member('william','will','pas',10);
 $n = new Member('deo','will','pas',10);
